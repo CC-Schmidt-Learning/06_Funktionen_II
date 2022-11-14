@@ -21,28 +21,30 @@ return num;
 output(getOp());
 function getOp() {
 let op = prompt("Please insert correct operator: ");
-if (isOpValid(op)) {
-    return "operator okay";
+if (isOpNotValid(op)) {
+    return "operator nicht okay";
 } else {
-   return "operator nicht okay";
+   return "operator okay";
 }
 };
+
+// function isOpValid(op) {
+// switch (op) {
+//     case "+":
+//     case "-":
+//     case "*":
+//     case "/": 
+//     case ":":  
+//     return true;
+
+//     default:
+//     return false;
+// }
+// };
 
 function isOpValid(op) {
-switch (op) {
-    case "+":
-    case "-":
-    case "*":
-    case "/": 
-    case ":":  
-    return true;
-
-    default:
-    return false;
-}
-
-
-};
+    return op == "+"|| op=="-"||op=="/"||op==":"||op=="*";
+    };
 
 // output(calculator(2,2,"+"));
 // output(calculator(2,5,"-"));
