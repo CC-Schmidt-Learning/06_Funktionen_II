@@ -9,20 +9,21 @@
 */
 startApp();
 function startApp(params) {
-  output(calculator(getNumber1(), getNumber2(), getOp()));  
+  output(calculator(getNumber("first"), getNumber("second"), getOp()));  
 };
 
-function getNumber1(params) {
-return 2;
-};
-
-function getNumber2(params) {
-return 2;
+function getNumber(figure) {
+let inputStr = prompt("Please insert " + figure + " number");
+let num =parseInt(inputStr);
+return num;
 };
 
 function getOp(params) {
-return  "+";
+let op = prompt("please insert correct operator")
+return  op;
 };
+
+
 
 // output(calculator(2,2,"+"));
 // output(calculator(2,5,"-"));
@@ -67,7 +68,7 @@ return a * b;
 };
 
 function divide(a,b) {
-    return (b != 0) ? a / b : "Error: Division by zero";
+    return (b != 0) ? a / b : " Division by zero";
 };
 
 //module: console output | test
