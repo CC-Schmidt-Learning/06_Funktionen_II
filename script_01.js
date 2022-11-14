@@ -18,12 +18,31 @@ let num =parseInt(inputStr);
 return num;
 };
 
-function getOp(params) {
-let op = prompt("please insert correct operator")
-return  op;
+output(getOp());
+function getOp() {
+let op = prompt("Please insert correct operator: ");
+if (isOpValid(op)) {
+    return "operator okay";
+} else {
+   return "operator nicht okay";
+}
 };
 
+function isOpValid(op) {
+switch (op) {
+    case "+":
+    case "-":
+    case "*":
+    case "/": 
+    case ":":  
+    return true;
 
+    default:
+    return false;
+}
+
+
+};
 
 // output(calculator(2,2,"+"));
 // output(calculator(2,5,"-"));
