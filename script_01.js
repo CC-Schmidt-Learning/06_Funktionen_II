@@ -7,16 +7,29 @@
 3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : checke!
 */
+startApp();
+function startApp(params) {
+  output(calculator(getNumber1(), getNumber2(), getOp()));  
+};
 
+function getNumber1(params) {
+return 2;
+};
 
+function getNumber2(params) {
+return 2;
+};
 
-output(calculator(2,2,"+"));
-output(calculator(2,5,"-"));
-output(calculator(4,5,"*"));
-output(calculator(6,1,":"));
-output(calculator(6,0,":"));
+function getOp(params) {
+return  "+";
+};
 
-output(calculator(9,9,"%"));
+// output(calculator(2,2,"+"));
+// output(calculator(2,5,"-"));
+// output(calculator(4,5,"*"));
+// output(calculator(6,1,":"));
+// output(calculator(6,0,":"));
+// output(calculator(9,9,"%"));
 
 function calculator(a,b,op) {
  switch (op) {
@@ -35,10 +48,9 @@ function calculator(a,b,op) {
 
     default: //ERROR
     return "something went wrong";
- }   
+ };
 
-}
-
+};
 
 //module: addition a+b | test:
 
@@ -70,5 +82,4 @@ function output(outputData) {
     } else{
 console.log("Error: " + outputData)
     }
-  
 };
