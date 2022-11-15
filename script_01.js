@@ -42,8 +42,8 @@ if (isOpNotValid(op)) {
 // }
 // };
 
-function isOpValid(op) {
-    return op == "+"|| op=="-"||op=="/"||op==":"||op=="*";
+function isOpNotValid(op) {
+    return op != "+"|| op!="-"||op!="/"||op!=":"||op!="*";
     };
 
 // output(calculator(2,2,"+"));
